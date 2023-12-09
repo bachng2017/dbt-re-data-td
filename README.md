@@ -1,4 +1,4 @@
-A (experimental) Treasure data support for dbt-re-data
+A (experimental) TreasureData (with trino adapter) support for dbt-re-data
 
 Check [here](https://github.com/re-data/dbt-re-data) for more details about dbt-re-data
 

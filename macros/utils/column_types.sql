@@ -1,4 +1,4 @@
-{% macro td__get_column_type(column) %}
+{% macro trino__get_column_type(column) %}
     
     {% if column.data_type in [
         'character varying',

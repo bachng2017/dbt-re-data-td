@@ -1,4 +1,4 @@
-{% macro td__quote_column_name(column_name) %}
+{% macro trino__quote_column_name(column_name) %}
     {% set quoted_col_name = '"' + column_name + '"' %}
     {{ return(quoted_col_name) }}
 {% endmacro %}

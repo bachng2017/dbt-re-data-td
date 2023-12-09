@@ -1,15 +1,15 @@
-{% macro td__timestamp_type() %}
+{% macro trino__timestamp_type() %}
     varchar
 {% endmacro %}
 
-{% macro td__string_type() %}
+{% macro trino__string_type() %}
     varchar
 {% endmacro %}
 
-{% macro td__numeric_type() %}
+{% macro trino__numeric_type() %}
     double
 {% endmacro %}
 
-{% macro td__boolean_type() %}
+{% macro trino__boolean_type() %}
     varchar
 {% endmacro %}
