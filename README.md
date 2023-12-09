@@ -5,12 +5,13 @@ Check [here](https://github.com/re-data/dbt-re-data) for more details about dbt-
 ### Usage
 Install necessary packages `dbt_utils`, `td_utils`,`re-data` and this package `dbt-re-data-td`
 
+Until re-data merge this https://github.com/re-data/dbt-re-data/pull/123, https://github.com/re-data/dbt-re-data.git is necessary
 ```packages.yml
 packages:
   ...
   - package: "dbt-labs/dbt_utils"
     version: "0.8.6"
-  - package: starburstdata/td_utils
+  - package: starburstdata/trino_utils
     version: 0.1.1
   - git: "https://github.com/re-data/dbt-re-data.git"
   - git: "https://github.com/bachng2017/dbt-re-data-td.git"
@@ -38,8 +39,7 @@ dispatch:
 Notes: 
   - `dbt_utils`,`td_utils` packages are necessary. `fivetran_utils` will be installed automatically by dbt-re-data
   - until `current_timestamp_in_utc` is implemented by dbt Core, a temporary macro is provided by this package. Hence, `re_data_td` need to be prior to `dbt_utils` in it's namespace
-  - untin `urrent_timestamp_backcompat` is implement by dbt-td-util, `re_data_td` need to be prior `dbt` it it's namespace (for dbt_utils > 1.0.0)
-
+  - until `current_timestamp_backcompat` is implement by dbt-trino-util, `re_data_td` need to be prior `dbt` it it's namespace (for dbt_utils > 1.0.0)
 
 
 install dbt packages by running
@@ -49,3 +49,8 @@ dbt deps
 
 then use re-data as usuall. Check [this](https://docs.getre.io/latest/docs/getting_started/installation/for_dbt_users) for more details.
 
+###  Environments
+- worked with this env.
+   - dbt-core: 1.7.3
+   - trino adapter: 1.7.0
+   - TreasureData 
